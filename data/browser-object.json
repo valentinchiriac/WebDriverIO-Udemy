@@ -1,0 +1,36 @@
+{
+	"sessionId": "f3bc9e36485ee2de7738fece33c19564",
+	"capabilities": {
+		"acceptInsecureCerts": false,
+		"browserName": "chrome",
+		"browserVersion": "142.0.7444.176",
+		"chrome": {
+			"chromedriverVersion": "142.0.7444.176 (c128b60bcfa95fd7050b7241c5289967d4ee077c-refs/branch-heads/7444@{#2750})",
+			"userDataDir": "C:\\Users\\VACHIR~1\\AppData\\Local\\Temp\\scoped_dir28448_2146422631"
+		},
+		"fedcm:accounts": true,
+		"goog:chromeOptions": {
+			"debuggerAddress": "localhost:57667"
+		},
+		"goog:processID": 34124,
+		"networkConnectionEnabled": false,
+		"pageLoadStrategy": "normal",
+		"platformName": "windows",
+		"proxy": {},
+		"setWindowRect": true,
+		"strictFileInteractability": false,
+		"timeouts": {
+			"implicit": 0,
+			"pageLoad": 300000,
+			"script": 30000
+		},
+		"unhandledPromptBehavior": "ignore",
+		"webSocketUrl": "ws://localhost:55204/session/f3bc9e36485ee2de7738fece33c19564",
+		"webauthn:extension:credBlob": true,
+		"webauthn:extension:largeBlob": true,
+		"webauthn:extension:minPinLength": true,
+		"webauthn:extension:prf": true,
+		"webauthn:virtualAuthenticators": true,
+		"wdio:driverPID": 28448
+	}
+}

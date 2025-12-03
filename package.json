@@ -1,0 +1,26 @@
+{
+  "name": "udemywebdrivercourse",
+  "version": "1.0.0",
+  "description": "udemy webdriverio automation framework",
+  "license": "ISC",
+  "author": "Valentin C",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "wdio": "wdio run ./wdio.conf.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.28.3",
+    "@babel/core": "^7.28.5",
+    "@babel/preset-env": "^7.28.5",
+    "@babel/register": "^7.28.3",
+    "@wdio/cli": "^9.20.1",
+    "@wdio/devtools-service": "^10.0.1",
+    "@wdio/local-runner": "^9.20.1",
+    "@wdio/mocha-framework": "^9.20.1",
+    "@wdio/spec-reporter": "^9.20.0",
+    "@wdio/visual-service": "^9.0.1",
+    "stack-trace": "^1.0.0-pre2"
+  }
+}

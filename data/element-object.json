@@ -1,0 +1,48 @@
+{
+    "sessionId": "d22e56ad4e465de0a4fc514d8e688516",
+    "elementId": "f.5BD9D172D7D7BE3B8DC889A6A7EBB8B8.d.83A30DDDB53290AB21916013B7DD610F.e.131",
+    "element-6066-11e4-a52e-4f735466cecf": "f.5BD9D172D7D7BE3B8DC889A6A7EBB8B8.d.83A30DDDB53290AB21916013B7DD610F.e.131",
+    "locator": {
+        "type": "css",
+        "value": "#contact_reply > h1"
+    },
+    "selector": "#contact_reply > h1",
+    "parent": {
+        "sessionId": "d22e56ad4e465de0a4fc514d8e688516",
+        "capabilities": {
+            "acceptInsecureCerts": false,
+            "browserName": "chrome",
+            "browserVersion": "142.0.7444.176",
+            "chrome": {
+                "chromedriverVersion": "142.0.7444.176 (c128b60bcfa95fd7050b7241c5289967d4ee077c-refs/branch-heads/7444@{#2750})",
+                "userDataDir": "C:\\Users\\VACHIR~1\\AppData\\Local\\Temp\\scoped_dir12092_890749502"
+            },
+            "fedcm:accounts": true,
+            "goog:chromeOptions": {
+                "debuggerAddress": "localhost:61864"
+            },
+            "goog:processID": 26780,
+            "networkConnectionEnabled": false,
+            "pageLoadStrategy": "normal",
+            "platformName": "windows",
+            "proxy": {},
+            "setWindowRect": true,
+            "strictFileInteractability": false,
+            "timeouts": {
+                "implicit": 0,
+                "pageLoad": 300000,
+                "script": 30000
+            },
+            "unhandledPromptBehavior": "ignore",
+            "webSocketUrl": "ws://localhost:61859/session/d22e56ad4e465de0a4fc514d8e688516",
+            "webauthn:extension:credBlob": true,
+            "webauthn:extension:largeBlob": true,
+            "webauthn:extension:minPinLength": true,
+            "webauthn:extension:prf": true,
+            "webauthn:virtualAuthenticators": true,
+            "wdio:driverPID": 12092
+        }
+    },
+    "isReactElement": false,
+    "isShadowElement": false
+}
