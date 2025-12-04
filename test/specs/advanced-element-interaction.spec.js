@@ -33,7 +33,6 @@ describe("advanced element interactions - examples", () => {
     const frontEndLanguage = await $("#dropdowm-menu-3");
     await frontEndLanguage.selectByVisibleText("CSS");
     await expect(frontEndLanguage).toHaveValue("CSS", { ignoreCase: true });
-    //await browser.pause(2000);
   });
 
   it("state commands", async () => {
@@ -48,7 +47,7 @@ describe("advanced element interactions - examples", () => {
     const lettuceRadioButton_isClickable =
       await lettuceRadioButton.isClickable();
     await expect(lettuceRadioButton_isClickable).toEqual(true);
-    await browser.pause(2000);
+  
 
     const cabbageRadioButton = await $('[value="cabbage"]');
     const cabbageRadioButton_isDisplayed =
@@ -66,12 +65,10 @@ describe("advanced element interactions - examples", () => {
     const elementToBeDragged = await $("#draggable");
     const targetElement = await $("#droppable");
     await elementToBeDragged.dragAndDrop(targetElement);
-    await browser.pause(2000);
 
     //Double Click
     const doubleClick = await $("#double-click");
     await doubleClick.doubleClick();
-    await browser.pause(3000);
 
     //Mouse over and element
     await $("//button[text()='Hover Over Me First!']").moveTo();
@@ -80,19 +77,16 @@ describe("advanced element interactions - examples", () => {
     );
     await firstLink.waitForClickable();
     await firstLink.click();
-    await browser.pause(3000);
 
     await $("//button[text()='Hover Over Me Second!']").moveTo();
     const secondLink = await $("(//*[text()='Link 1'])[2]");
     await secondLink.waitForClickable();
     await secondLink.click();
-    await browser.pause(3000);
 
     await $("//button[text()='Hover Over Me Third!']").moveTo();
     const thirdLink = await $("(//*[text()='Link 1'])[3]");
     await thirdLink.waitForClickable();
     await thirdLink.click();
-    await browser.pause(3000);
   });
 
   it("handling multiple web windows", async () => {
@@ -104,13 +98,12 @@ describe("advanced element interactions - examples", () => {
     await expect(browser).toHaveUrl(
       expect.stringContaining("automationteststore")
     );
-    await browser.pause(3000);
 
     await browser.switchWindow("webdriveruniversity.com");
     let parentWindowTitle = await browser.getTitle();
     console.log(`>>Parent Window Title: ${parentWindowTitle}`);
     await expect(browser).toHaveUrl(expect.stringContaining("webdriver"));
-    await browser.pause(3000);
+   
 
     await $("#contact-us").click();
     await browser.switchWindow("automationtest");
@@ -118,7 +111,7 @@ describe("advanced element interactions - examples", () => {
 
     await browser.switchWindow("webdriveruni");
     console.log(await browser.getTitle());
-    await browser.pause(3000);
+   
   });
 
   it("IFrames", async () => {
@@ -127,25 +120,50 @@ describe("advanced element interactions - examples", () => {
     await browser.switchFrame(iFrame);
     await $("//a[normalize-space()='Our Products']").click();
     await browser.switchToParentFrame();
-    await browser.pause(3000);
+   
   });
 
-  it.only("Alerts handeling", async () => {
+  it("Alerts handeling", async () => {
     await browser.url("/Popup-Alerts/index.html");
     await $("#button1").click();
-    await browser.pause(4000);
+
     browser.acceptAlert();
-    await browser.pause(2000);
+
   });
 
-  it.only("Alerts handeling 2", async () => {
+  it("Alerts handeling 2", async () => {
     await browser.url("/Popup-Alerts/index.html");
+
     await $("#button4").click();
     const alertText = await browser.getAlertText();
     await expect(alertText).toEqual('Press a button!');
 
     browser.acceptAlert();
     await expect($('#confirm-alert-text')).toHaveText('You pressed OK!');
-    await browser.pause(3000);
+
+    await $("#button4").click();
+    browser.dismissAlert();
+    await expect($('#confirm-alert-text')).toHaveText('You pressed Cancel!');
+
+  });
+
+  it('file upload', async() => {
+     await browser.url("/File-Upload/index.html");
+     await $('#myFile').addValue(`${process.cwd()}\\data\\dummy_text_file.txt`);
+     await browser.pause(3000);
+     await $("#submit-button").click();
+  
+  });
+
+  it('JS Execute - Injecting JS code', async() => {
+    await browser.url("/Hidden-Elements/index.html");
+    await browser.execute(() => {
+      return document.getElementById('not-displayed').setAttribute("id", "");
+    })
+
+    await browser.execute(() => {
+      return document.body.style.backgroundColor = "blue";
+    })
+  
   });
 });
