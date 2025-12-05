@@ -1,3 +1,5 @@
+import allureReporter from "@wdio/allure-reporter";
+
 const assert = require('assert');
 
 describe('webdriver university - contact us page', () => {
@@ -7,6 +9,9 @@ describe('webdriver university - contact us page', () => {
         console.log(`>>Browser Object: + ${JSON.stringify(browser)}`);
     });
     it('valid submission - all informations are provided correctly', async() => {
+        allureReporter.addFeature("Contact us page - valid Submission");
+        allureReporter.addDescription("Validate contact Us page by submitting all data");
+        allureReporter.addSeverity("Critical");
         const firstName = await $('//*[@name="first_name"]')
         const lastName = await $('//*[@name="last_name"]');
         const emailAdress = await $('//*[@name="email"]');
@@ -30,6 +35,9 @@ describe('webdriver university - contact us page', () => {
         // await expect(successfulSubmissionHeader2).toEqual('Thank You for your Message!333')
     });
     it('invalid submission - all informations are NOT provided correctly', async() => {
+        allureReporter.addFeature("Contact us page - invalid Submission");
+        allureReporter.addDescription("Validate contact Us page by not submitting all data");
+        allureReporter.addSeverity("Medium");
         const firstName = await $('//*[@name="first_name"]')
         const lastName = await $('//*[@name="last_name"]');
         const message = await $('//*[@name="message"]');
@@ -38,7 +46,7 @@ describe('webdriver university - contact us page', () => {
         await firstName.setValue("Batman");
         await lastName.setValue("Van Damme");
         //await emailAdress.setValue("batman@vandamme.com");
-        await message.setValue("Bine v-am gasit! La multi ani coaielor!");
+        await message.setValue("Bine v-am gasit! La multi ani colegi!");
         await submitButton.click();
         const unsuccessfulSubmissionHeader = await $('body');
         const bodyText = await unsuccessfulSubmissionHeader.getText();

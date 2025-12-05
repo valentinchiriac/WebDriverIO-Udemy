@@ -9,7 +9,7 @@ describe('wait commands - examples', () => {
        
        await browser.pause(6000);
        await clickMeButton.click();
-       await browser.pause(1000);
+       //await browser.pause(1000);
     });
 
     it('waitForButtonToBeClickable', async() => {
@@ -19,7 +19,7 @@ describe('wait commands - examples', () => {
         //await clickMeButton.waitForClickable({timeout:3000});
         await clickMeButton.waitForClickable();
         await clickMeButton.click();
-        await browser.pause(1500);
+        //await browser.pause(1500);
         
     });
 
