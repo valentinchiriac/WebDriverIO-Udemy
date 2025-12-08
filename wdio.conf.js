@@ -22,7 +22,7 @@ exports.config = {
     //
     // Glob for spec files. Matches any JavaScript spec under `test/` (including `test/specs/` and `test/`).
     specs: [
-        './test/**/advanced-element-interaction.spec.js'
+        './test/**/add-items-to-basket.spec.js'
     ],
     // Patterns to exclude.
     exclude: [
