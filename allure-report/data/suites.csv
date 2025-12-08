@@ -1,0 +1,3 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"Validate contact Us page by submitting all data","6545","valid submission - all informations are provided correctly","webdriver university - contact us page","Fri Dec 05 12:30:06 EET 2025","passed","Fri Dec 05 12:30:13 EET 2025","","","",""
+"Validate contact Us page by not submitting all data","568","invalid submission - all informations are NOT provided correctly","webdriver university - contact us page","Fri Dec 05 12:30:13 EET 2025","passed","Fri Dec 05 12:30:14 EET 2025","","","",""
