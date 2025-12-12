@@ -18,11 +18,9 @@ describe("webdriver university - contact us page", function () {
       "Validate contact Us page by submitting all data"
     );
     allureReporter.addSeverity("Critical");
-    await ContactUsPage.submitForm(
+    await ContactUsPage.submitForm_UsingRandomData(
       "Bruce Lee",
       "Van Damme",
-      "batman@vandamme.com",
-      "Bine v-am gasit! La multi ani colegi!"
     );
 
     await expect(ContactUsPage.successfulSubmissionHeader).toHaveText(
