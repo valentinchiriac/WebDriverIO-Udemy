@@ -25,7 +25,7 @@ exports.config = {
   // of the config file unless it's absolute.
   //
   // Glob for spec files. Matches any JavaScript spec under `test/` (including `test/specs/` and `test/`).
-  specs: ["./test/**/contact-us.spec.js"],
+  specs: ["./test/specs/**/add-items-to-basket.spec.js"],
   // Patterns to exclude.
   exclude: [
     // 'path/to/excluded/files'
