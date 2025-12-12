@@ -25,12 +25,22 @@ exports.config = {
   // of the config file unless it's absolute.
   //
   // Glob for spec files. Matches any JavaScript spec under `test/` (including `test/specs/` and `test/`).
-  specs: ["./test/specs/**/add-items-to-basket.spec.js"],
+  specs: ["./test/specs/webdriver-university/*.spec.js"],
   // Patterns to exclude.
-  exclude: [
-    // 'path/to/excluded/files'
-  ],
-  //
+  //exclude: [
+  //  "./test/specs/**/contact-us.spec.js"
+  //],
+  suites: {
+    smoke: [
+      'test/specs/automation-test-store/add-items-to-basket.spec.js',
+      'test/specs/webdriver-university/locating-elements.spec.js',
+      'test/specs/webdriver-university/contact-us.spec.js'
+    ],
+    regression: [
+      'test/specs/webdriver-university/locating-elements.spec.js',
+      'test/specs/webdriver-university/wait-pause.spec.js'
+    ]
+  },
   // ============
   // Capabilities
   // ============

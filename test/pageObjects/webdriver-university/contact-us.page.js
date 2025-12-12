@@ -1,4 +1,6 @@
 import BasePage from "./base.page";
+import DataGenerator from "../../../utils/data-generator";
+import dataGenerator from "../../../utils/data-generator";
 
 class ContactUsPage extends BasePage{
     open(){
@@ -38,6 +40,14 @@ class ContactUsPage extends BasePage{
         await this.inputLastName.setValue(lastName);
         await this.inputEmailAddress.setValue(emailAddress);
         await this.inputMessage.setValue(message);
+        await this.submitButton.click();
+    }
+
+    async submitForm_UsingRandomData(firstName, lastName){
+        await this.inputFirstName.setValue(firstName);
+        await this.inputLastName.setValue(lastName);
+        await this.inputEmailAddress.setValue("AutoEmail_" + dataGenerator.generateRandomSring() + "@endava.com");
+        await this.inputMessage.setValue("AutoMessage_: " + dataGenerator.generateRandomSring());
         await this.submitButton.click();
     }
 }

@@ -8,7 +8,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "wdio": "wdio run ./wdio.conf.js"
+    "wdio": "wdio run ./wdio.conf.js",
+    "automation-test-store-tests": "npx wdio --spec test/specs/automation-test-store/*.spec.js",
+    "webdriver-university-tests": "npx wdio --spec test/specs/webdriver-university/*.spec.js",
+    "smoke-suite": "npx wdio --suite smoke"
   },
   "devDependencies": {
     "@babel/cli": "^7.28.3",
