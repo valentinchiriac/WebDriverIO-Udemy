@@ -25,6 +25,14 @@ class ContactUsPage extends BasePage{
         return $('//input[@value="SUBMIT"]');
     }
 
+    get successfulSubmissionHeader(){
+        return $('#contact_reply > h1');
+    }
+
+    get unsuccessfulSubmissionHeader(){
+        return $('body');
+    }
+
     async submitForm(firstName, lastName, emailAddress, message){
         await this.inputFirstName.setValue(firstName);
         await this.inputLastName.setValue(lastName);
